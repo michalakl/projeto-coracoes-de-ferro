@@ -1,47 +1,320 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corações de Ferro - O Filme</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 5px solid #d4af37;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .main-content {
-            padding: 20px 0;
-            line-height: 1.6em;
-        }
-        .main-content h2 {
-            color: #444;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .trailer {
-            text-align: center;
-            margin-top: 20px;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corações de Ferro (Fury, 2014) — Página especial</title>
+  <meta name="description" content="Saiba mais sobre o filme Corações de Ferro (Fury, 2014): sinopse, elenco, curiosidades e bastidores do tanque M4 Sherman.">
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Corações de Ferro (Fury, 2014)" />
+  <meta property="og:description" content="Sinopse, elenco, trilha e curiosidades do filme de guerra dirigido por David Ayer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="cover.jpg" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg-2:#0f172a;
+      --card:#111827;
+      --muted:#94a3b8;
+      --text:#e5e7eb;
+      --accent:#22d3ee;
+      --accent-2:#60a5fa;
+      --shadow:0 10px 25px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%,rgba(96,165,250,.15),transparent),linear-gradient(180deg,var(--bg),var(--bg-2));color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+    a{color:var(--accent)}
+    header{
+      position:relative;
+      isolation:isolate;
+      min-height:72vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:72px 20px 40px;
+      overflow:hidden;
+    }
+    header::before{
+      content:"";
+      position:absolute;inset:-10%;
+      background:
+        radial-gradient(800px 400px at 10% 10%,rgba(34,211,238,.12),transparent 60%),
+        radial-gradient(600px 300px at 90% 20%,rgba(96,165,250,.12),transparent 60%),
+        url('hero.jpg');
+      background-size:cover,cover,cover;
+      background-position:center;
+      filter:contrast(1.1) brightness(.55) saturate(1.05) blur(2px);
+      z-index:-1;
+    }
+    .brand{letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+    .title{font-family:Montserrat,Inter,sans-serif;font-size:clamp(36px,6vw,64px);line-height:1.05;margin:6px 0 14px}
+    .subtitle{font-size:clamp(16px,2.6vw,20px);color:#cbd5e1;max-width:800px;margin:0 auto 24px}
+    .cta{
+      display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center
+    }
+    .btn{
+      padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(6px);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+      color:var(--text);text-decoration:none;font-weight:600;box-shadow:var(--shadow);
+      transition:.25s transform,.25s box-shadow,.25s border-color
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45);border-color:rgba(255,255,255,.22)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1020;border:none}
+    nav{
+      position:sticky;top:0;z-index:50;background:rgba(11,16,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    nav .wrap{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 16px}
+    nav a{color:#dbeafe;text-decoration:none;font-weight:600;margin-right:8px;font-size:14px;opacity:.9}
+    nav a:hover{opacity:1}
+    .wrap{max-width:var(--max);margin:0 auto;padding:32px 20px}
+    .grid{display:grid;gap:22px}
+    @media(min-width:880px){.grid.cols-2{grid-template-columns:1.2fr .8fr}}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h2{font-family:Montserrat,Inter,sans-serif;font-weight:800;letter-spacing:.01em;margin:0 0 12px}
+    .meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;font-size:15px;color:#cbd5e1}
+    @media(min-width:580px){.meta{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .tag{display:inline-block;background:rgba(148,163,184,.16);border:1px solid rgba(148,163,184,.4);padding:.25rem .55rem;border-radius:999px;font-size:.85rem;margin:.2rem .35rem .2rem 0}
+    .poster{
+      width:100%;aspect-ratio:2/3;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.12)
+    }
+    .facts{display:grid;grid-template-columns:1fr;gap:12px}
+    .facts .row{display:flex;gap:10px;align-items:flex-start}
+    .badge{font-size:.83rem;color:#93c5fd;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.35);padding:.2rem .5rem;border-radius:999px}
+    .list{padding-left:18px;margin:0}
+    .list li{margin:.4rem 0}
+    .trivia{display:grid;gap:16px}
+    .trivia p{margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    @media(min-width:760px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .thumb{position:relative;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08);cursor:pointer}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+    .thumb:hover img{transform:scale(1.05)}
+    .modal{
+      position:fixed;inset:0;background:rgba(0,0,0,.76);display:none;align-items:center;justify-content:center;padding:24px;z-index:100
+    }
+    .modal.open{display:flex}
+    .modal img{max-width:92vw;max-height:88vh;border-radius:12px;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow)}
+    footer{padding:36px 20px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+    .note{font-size:.92rem;color:#a5b4fc}
+    /* small helper */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <nav aria-label="Navegação principal">
+    <div class="wrap">
+      <strong style="letter-spacing:.2em;color:#93c5fd">FURY</strong>
+      <div style="flex:1"></div>
+      <a href="#sobre">Sobre</a>
+      <a href="#elenco">Elenco</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#trailer">Trailer</a>
+    </div>
+  </nav>
+
+  <header role="banner" aria-label="Capa do filme Corações de Ferro">
+    <p class="brand">CORAÇÕES DE FERRO • 2014</p>
+    <h1 class="title">Guerra, coragem e o peso das escolhas</h1>
+    <p class="subtitle">
+      Em abril de 1945, nos dias finais da Segunda Guerra, a tripulação do tanque <em>M4 Sherman</em> apelidado de <strong>“Fury”</strong> luta em território alemão. 
+      Um novato precisa aprender rápido enquanto o sargento Wardaddy conduz a equipe por missões quase suicidas.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#sobre" aria-label="Ir para a seção Sobre">Ler sinopse</a>
+      <a class="btn" href="#elenco" aria-label="Ir para a seção Elenco">Ver elenco</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="sobre" class="wrap grid cols-2" aria-labelledby="h-sobre">
+      <article class="card">
+        <h2 id="h-sobre">Sobre o filme</h2>
+        <p>
+          <strong>Corações de Ferro</strong> (<em>Fury</em>) é um filme de guerra lançado em <strong>2014</strong>, escrito e dirigido por <strong>David Ayer</strong>.
+          A história acompanha cinco soldados americanos que operam um tanque <em>M4 Sherman</em> no fim da Segunda Guerra Mundial.
+          Liderados pelo sargento <strong>Don “Wardaddy” Collier</strong>, eles enfrentam moral em frangalhos, munição escassa e inimigos superiores em poder de fogo.
+        </p>
+        <p>
+          O filme se destaca pelo <strong>realismo cru</strong>, pelas cenas tensas de combate entre tanques e pelo foco no vínculo — às vezes fraturado — entre os tripulantes:
+          lealdade, trauma, e decisões impossíveis sob pressão.
+        </p>
+
+        <div class="meta" aria-label="Informações técnicas do filme">
+          <div><strong>Duração:</strong><br><span class="muted">≈ 134 min</span></div>
+          <div><strong>Direção:</strong><br><span class="muted">David Ayer</span></div>
+          <div><strong>Gênero:</strong><br><span class="muted">Guerra • Drama • Ação</span></div>
+          <div><strong>Classificação:</strong><br><span class="muted">16+</span></div>
+        </div>
+
+        <div style="margin-top:14px">
+          <span class="tag">Segunda Guerra</span>
+          <span class="tag">Tanques</span>
+          <span class="tag">Camaradagem</span>
+          <span class="tag">Sobrevivência</span>
+        </div>
+      </article>
+
+      <aside class="card" aria-label="Poster do filme">
+        <!-- Substitua poster.jpg pela capa do filme que você tiver direitos para usar -->
+        <img class="poster" src="poster.jpg" alt="Poster de Corações de Ferro com o tanque e a tripulação" />
+        <p class="note" style="margin-top:10px">
+          Dica: substitua <code>poster.jpg</code> e <code>hero.jpg</code> por imagens suas (com permissão de uso) para um visual mais impactante.
+        </p>
+      </aside>
+    </section>
+
+    <section id="elenco" class="wrap grid cols-2" aria-labelledby="h-elenco">
+      <article class="card">
+        <h2 id="h-elenco">Elenco principal</h2>
+        <ul class="list">
+          <li><strong>Brad Pitt</strong> — Don “Wardaddy” Collier (sargento e comandante do tanque)</li>
+          <li><strong>Shia LaBeouf</strong> — Boyd “Bible” Swan (artilheiro)</li>
+          <li><strong>Logan Lerman</strong> — Norman Ellison (recruta/operador de rádio-metralhadora)</li>
+          <li><strong>Michael Peña</strong> — Trini “Gordo” Garcia (motorista)</li>
+          <li><strong>Jon Bernthal</strong> — Grady “Coon-Ass” Travis (municiador/mecânico)</li>
+          <li><strong>Jason Isaacs</strong> — Capitão Waggoner</li>
+        </ul>
+        <div class="facts" style="margin-top:10px">
+          <div class="row"><span class="badge">Ambientação</span> Alemanha, abril de 1945, enquanto o Exército Aliado avança.</div>
+          <div class="row"><span class="badge">Tanque</span> M4 Sherman apelidado de <em>Fury</em> — praticamente um “personagem”.</div>
+          <div class="row"><span class="badge">Trilha</span> Steven Price (clima sombrio e tenso).</div>
+        </div>
+      </article>
+
+      <aside class="card">
+        <h2>Temas e discussões</h2>
+        <p>Alguns tópicos para debate em sala ou clube do filme:</p>
+        <ul class="list">
+          <li>É possível manter a humanidade em cenários desumanizantes?</li>
+          <li>O novato Norman deve ser poupado ou endurecido? Qual é o papel de Wardaddy nisso?</li>
+          <li>O “realismo” em filmes de guerra precisa de choque gráfico para ser honesto?</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="curiosidades" class="wrap" aria-labelledby="h-curiosidades">
+      <div class="card">
+        <h2 id="h-curiosidades">Curiosidades</h2>
+        <div class="trivia">
+          <p>• Parte das filmagens utilizou <strong>tanques reais</strong> emprestados de museus e coleções, incluindo exemplares operacionais de época.</p>
+          <p>• O elenco passou por <strong>treinamento militar</strong> e convivência intensa para criar a sensação de tripulação coesa (e tensa).</p>
+          <p>• A fotografia privilegia tons frios e lama/metal, reforçando o <strong>clima claustrofóbico</strong> do interior do tanque.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="wrap" aria-labelledby="h-galeria">
+      <div class="card">
+        <h2 id="h-galeria">Galeria</h2>
+        <div class="gallery" role="list">
+          <!-- Substitua as imagens por arquivos seus. Clique para ampliar. -->
+          <div class="thumb" role="listitem" tabindex="0" aria-label="Foto do tanque em campo">
+            <img src="img1.jpg" alt="Tanque Sherman em terreno lamacento" />
+          </div>
+          <div class="thumb" role="listitem" tabindex="0" aria-label="Tripulação do Fury">
+            <img src="img2.jpg" alt="Tripulação dentro do tanque" />
+          </div>
+          <div class="thumb" role="listitem" tabindex="0" aria-label="Cena noturna">
+            <img src="img3.jpg" alt="Cena noturna com fumaça e iluminação baixa" />
+          </div>
+          <div class="thumb" role="listitem" tabindex="0" aria-label="Interior do tanque">
+            <img src="img4.jpg" alt="Interior apertado do tanque com munições" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trailer" class="wrap grid cols-2" aria-labelledby="h-trailer">
+      <article class="card">
+        <h2 id="h-trailer">Assista ao trailer</h2>
+        <!-- Dica: troque VIDEO_ID pelo ID do trailer oficial no YouTube -->
+        <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+          <iframe
+            title="Trailer de Corações de Ferro"
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="position:absolute;inset:0;width:100%;height:100%;border:0">
+          </iframe>
+        </div>
+        <p class="note" style="margin-top:10px">Se preferir, substitua o <code>iframe</code> por um arquivo MP4 local com um player.</p>
+      </article>
+
+      <aside class="card">
+        <h2>Ficha rápida</h2>
+        <ul class="list">
+          <li><strong>Título no Brasil:</strong> Corações de Ferro</li>
+          <li><strong>Título original:</strong> Fury</li>
+          <li><strong>Ano:</strong> 2014</li>
+          <li><strong>País:</strong> EUA</li>
+          <li><strong>Direção/Roteiro:</strong> David Ayer</li>
+          <li><strong>Música:</strong> Steven Price</li>
+          <li><strong>Fotografia:</strong> Roman Vasyanov</li>
+          <li><strong>Distribuição:</strong> Columbia Pictures</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Visualização da imagem">
+    <img id="modal-img" alt="" src="" />
+    <button class="sr-only" id="close">Fechar</button>
+  </div>
+
+  <footer>
+    <p>Projeto de fã sem fins comerciais. Use imagens apenas com permissão/licença.</p>
+    <p style="margin-top:6px">Feito com ♥ — <a href="#conteudo">voltar ao topo</a></p>
+  </footer>
+
+  <script>
+    // Rolagem suave para âncoras do nav
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    // Modal simples para a galeria
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const thumbs = document.querySelectorAll('.thumb img');
+    thumbs.forEach(img=>{
+      img.addEventListener('click', ()=>openModal(img.src, img.alt));
+      img.parentElement.addEventListener('keydown', (e)=>{
+        if(e.key==='Enter' || e.key===' ') { e.preventDefault(); openModal(img.src, img.alt); }
+      });
+    });
+    function openModal(src, alt){
+      modalImg.src = src;
+      modalImg.alt = alt;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      modalImg.src = "";
+      modalImg.alt = "";
+    }
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+  </script>
+</body>
+</html>
